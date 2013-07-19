@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <title>[TEST] web board for chess and checkers</title>
+  <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="js/jqModal.js" type="text/javascript"></script>
+
+  <script src="js/boardgame.js" type="text/javascript"></script>
+  <script src="js/boardview.js" type="text/javascript"></script>
+
+  <script src="js/chess.js" type="text/javascript"></script>
+  <script src="js/chessboard.js" type="text/javascript"></script>
+
+  <script src="js/draughts.js" type="text/javascript"></script>
+  <script src="js/draughtsboard.js" type="text/javascript"></script>
+  
+  <script src="js/demo.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="board.css" />
+</head>
+<body>
+
+<div id="main">
+
+<div id="Loaders">
+This is a demo page for my HTML board for chess and (international) checkers.
+It can show a position (using FEN), replay a chess game (from PGN) or let you select valid moves.
+It can also forward your move to an external javascript helper for online games, you just have to
+write the server and helpers ;)
+<br/>
+<select id="gcombo" onChange="changed()">
+    <option value="new">New game</option>
+    <option value="two">Two boards</option>
+    <option value="fischer-spassky">fischer-spassky</option>
+    <option value="cbp">CBP game</option>
+    <option value="checkers">Checkers</option>
+    <option value="checkers-fen">Checkers (FEN start)</option>
+<select>
+</div>
+
+<div id="content"></div>
+
+<h3>Credits</h3>
+<ul>
+    <li>It started as a fork of <a href="https://github.com/bmarini/jchess">jchess</a> but I ended up rewriting everything but the parts of PGN parser.</li>
+    <li>Piece images from <a href="http://commons.wikimedia.org/wiki/Category:SVG_chess_pieces">Wikimedia</a>.</li>
+    <li>It was inspired by the look of <a href="http://www.jeffcole.org/chessbypost/">Chess By Post</a>. The PGN parser was fixed to handle CBP's PGN export.</li>
+</ul>
+
+<h3>TODO</h3>
+<ul>
+    <li>There are still a couple of border cases where move selection will not work</li>
+    <li>Detect and report check, checkmate and stalemate</li>
+    <li>Build a light server (using node.js??) for actual online game</li>
+    <li>Position editor mode</li>
+    <li>PGN export</li>
+    <li>Show comments in replay mode</li>
+    <li>Extend it to play Go and reversi</li>
+</ul>
+
+</div>
+</body>
+</html>
+

@@ -28,7 +28,7 @@ function changed() {
     } else if (name == "checkers-fen") {
         new DraughtsBoard(reset(), {fen:"B:W18,24,27,28,K10,K15:B12,16,20,K22,K25,K29"});
     } else {
-        url = 'pgns/'+name+'.pgn';
+        url = 'PGN/'+name+'.pgn';
         $.get(url, pgnLoaded, "text");
     }
     

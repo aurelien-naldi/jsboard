@@ -23,9 +23,9 @@ function changed() {
         newGame();
     } else if (name == "two") {
         twoBoards();
-    } else if (name == "draughts") {
+    } else if (name == "checkers") {
         new DraughtsBoard(reset());
-    } else if (name == "draughts-fen") {
+    } else if (name == "checkers-fen") {
         new DraughtsBoard(reset(), {fen:"B:W18,24,27,28,K10,K15:B12,16,20,K22,K25,K29"});
     } else {
         url = 'pgns/'+name+'.pgn';
@@ -72,11 +72,6 @@ function twoBoards() {
 }
 
 jQuery(function($) {
-
     changed();
-//    newGame();
-//    twoBoards();
-//  loadGame( 'test' );
-
 });
 

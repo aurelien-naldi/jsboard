@@ -7,6 +7,8 @@ It can show a position (using FEN), replay a chess game (from PGN)
 or let you select valid moves. It can also forward your move to a
 javascript helper for online games (waiting for some server-side work)
 
+See how it behaves in [the demo page](http://aurelien-naldi.github.io/jsboard/)
+
 Credits
 -------
 
@@ -25,3 +27,4 @@ TODO
 * PGN export
 * Show comments in replay mode
 * Extend it to play Go and reversi
+* actually enjoy playing board games in the future

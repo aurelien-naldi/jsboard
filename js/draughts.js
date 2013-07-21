@@ -212,6 +212,11 @@ Draughts.prototype.move2transition = function(move) {
     // actually perform the move
     this.game.transitions.push(tmove);
     this.next();
+    
+    if (this._helper && !move.noforward) {
+        this._helper.queueMove(this, move);
+    }
+    
 };
 
 

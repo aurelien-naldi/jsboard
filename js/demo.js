@@ -5,10 +5,7 @@ function DemoHelper(game_src, game_dst, idx) {
     this.idx = idx;
     game_src._helper = this;
     
-    this.queueMove = function (game, srcpos, dstpos, promote) {
-
-        console.log(idx+" FW: "+srcpos+" to "+dstpos);
-        var move = [srcpos, dstpos, promote];
+    this.queueMove = function (game, move) {
         move.noforward = true;
         this.game.queueMove(move);
     }

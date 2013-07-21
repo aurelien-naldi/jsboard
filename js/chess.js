@@ -315,7 +315,7 @@ Chess.prototype.move2transition = function(move) {
     if (this._helper && !move.noforward) {
         var srcpos = piece.cell.pos;
         var dstpos = dest.pos;
-        this._helper.queueMove(this, src, dest, promote);
+        this._helper.queueMove(this, move);
     }
 
 };

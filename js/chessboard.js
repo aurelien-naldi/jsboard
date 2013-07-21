@@ -27,7 +27,7 @@
 /* The Chess Board */
 ChessBoard = function(parent, gameOptions, viewOptions) {
     this.game = new Chess(gameOptions);
-    this.init(parent);
+    this.init(parent, viewOptions);
 };
 
 // Import Board's functions into ChessBoard's prototype
